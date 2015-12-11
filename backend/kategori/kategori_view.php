@@ -28,10 +28,11 @@ if (isset($_GET['act'])) {
 		</thead>
 		<tbody>
 		<?php
-						//data paging 
-	$batas=5;
+if (empty($_GET['halaman'])) {
+    $halaman=0;
+}else{
 $halaman=$_GET['halaman'];
-$halaman=0;
+}	$batas=5;
 $posisi=null;
 if(empty($halaman)){
 	$posisi=0;
